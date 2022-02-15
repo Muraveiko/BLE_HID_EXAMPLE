@@ -106,7 +106,7 @@ public class ConfigurationFragment extends Fragment implements
             Intent i = getActivity().getBaseContext().getPackageManager()
                     .getLaunchIntentForPackage(getActivity().getBaseContext().getPackageName());
 
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
             ((MainActivity) getActivity()).restartGattDatabase();
             startActivity(i);
         }
